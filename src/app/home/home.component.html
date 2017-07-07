@@ -1,0 +1,38 @@
+
+
+<p class="well lead text-center top-mgn">Guess the computer generated random number between 1 to 10 in 3 fucking tries</p>
+
+<table class="table table-hover table-inverse well lead" align="center">
+    <tr>
+        <th>Guess
+        </th>
+        <th>No of Guesses
+        </th>
+        <th>Score
+        </th>
+    </tr>
+    <tr class="table-success">
+        <td>Correct</td>
+        <td>1</td>
+        <td>+5</td>
+    </tr>
+    <tr>
+        <td>Correct</td>
+        <td>2</td>
+        <td>+3</td>
+    </tr>
+    <tr class="table-warning">
+        <td>Correct</td>
+        <td>3</td>
+        <td>+1</td>
+    </tr>
+    <tr>
+        <td>Incorrect</td>
+        <td>3</td>
+        <td>-1</td>
+    </tr>
+</table>
+
+<div align="center" class="btm-mgn top-mgn">
+    <button class="btn btn-primary btn-sm text-center" [routerLink]="['/game']"><span class="lead custom-font-size">Let's Start</span></button>
+</div>

@@ -1,0 +1,45 @@
+button, input, button:focus{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    transition: .3s;
+    text-align: center;
+    border: 10px solid black
+}
+button:hover, input:hover, input:focus{
+    transition: .3s;
+    border: 15px solid black
+}
+span{
+    vertical-align: center
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.btm-mgn{
+    margin-bottom: 100px
+}
+.top-mgn{
+    margin-top: 30px
+}
+.custom-font-size{
+    font-size:18px
+}
+.badge{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px
+}
+.custom-font-size-max{
+    font-size: 23px
+}
+.highscore{
+    background-color: #FFC107;
+    color: black
+}
+.score{
+    background-color: #C0C0C0;
+    color: black
+}

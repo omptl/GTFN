@@ -1,0 +1,38 @@
+
+<p class="well lead text-center score top-mgn">Score : {{score}}</p>
+<div id="form-container" class="show top-mgn" *ngIf="deviation!=0">
+
+<div class="row" align="center">
+  <form name="guessForm">
+  <div class="col-sm-6" ><br>
+    <input name="guessField" class="lead custom-font-size" type="number" placeholder="Guess" [value]="guess" (input)="guess = $event.target.value">
+  </div>
+  <div class="col-sm-6">
+    <br>
+    <button (click)="verifyGuess()"  class=" btn btn-primary btn-sm" id="verifyBtn"><span class="lead custom-font-size">Verify</span></button>
+  </div>
+  </form>
+</div>
+
+  
+  
+
+
+</div>
+  <div align="center" class="top-mgn">
+    <p class="hide alert alert-danger" id="error-limit">DumbAss, type your guess between 1 to 10.</p>
+    <p class="hide alert alert-danger" id="error">Asshole, type your guess.</p>
+    <p *ngIf="deviation<0 && noOfTries<=2 " class="alert alert-warning show" id="get-lower">Buddy, seems like you are high.</p>
+    <p *ngIf="deviation>0 && noOfTries<=2 && guess!=null" class="alert alert-warning show" id="get-higher">Baby, you need to get high.</p>
+    <p *ngIf="deviation===0 && noOfTries<=3" class="alert alert-success" id="success">Fuck Yeah! <b class="lead">{{original}}</b>. That's the Fucking Number.<br> Now go and Party Hard.<br> <b class="lead">Don't Drink And Drive, Smoke And Fly</b></p>
+    <p *ngIf="deviation!=0 && noOfTries===3" class="alert alert-danger" id="danger">The Fucking Number was <b class="lead">{{original}}</b>.<br> You lost Motherfucker.<br> <b class="lead">Get Out Of Here.</b></p>
+    <p *ngIf="deviation!=0 && noOfTries===2" class="alert alert-warning lead" id="warning">Last Chance Motherfucker. Fly or Die.</p>
+  </div>
+<div id="guesses-container"  class="show" align="center">
+  <p class="text-info">No of guesses : 
+    <span class="badge"><b class="lead custom-font-size-max" >{{noOfTries}}</b></span>
+  </p>
+</div>
+<div align="center" class="btm-mgn top-mgn">
+<button (click)="initializeGame()" class="btn btn-warning btn-sm"><span class="lead custom-font-size">Restart</span></button>
+</div>

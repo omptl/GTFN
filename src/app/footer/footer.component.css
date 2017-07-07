@@ -1,0 +1,17 @@
+footer{
+    background: #37474F;
+    padding: 10px;
+    font-size: 12px
+}
+ul{
+    list-style-type: none
+}
+li{
+    display: inline-block
+}
+li:last-child{
+    float: right
+}
+li:first-child{
+    padding-top: 10px
+}
