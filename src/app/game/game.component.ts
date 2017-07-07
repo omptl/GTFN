@@ -12,10 +12,12 @@ deviation: number;
   original: number;
   guess: number;
   score: number;
-  highScore: number
+  highScore: number;
+  totalGuesses: number;
   constructor(){
     this.initializeGame();
     this.score = 0;
+    this.totalGuesses = 0;
   }
 
   initializeGame(){
@@ -68,7 +70,7 @@ deviation: number;
     }
   }
   verifyGuess(){
-    
+    this.totalGuesses = this.totalGuesses + 1;
     var e,fc,gc,el,gl,gh,s,d;
     e = document.getElementById("error");
     fc = document.getElementById("form-container");

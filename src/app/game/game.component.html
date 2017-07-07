@@ -1,5 +1,5 @@
 
-<p class="well lead text-center score top-mgn">Score : {{score}}</p>
+<p class="well lead text-center score top-mgn">Score : <b class="dont-change-this-shit-coward" >{{score}}</b></p>
 <div id="form-container" class="show top-mgn" *ngIf="deviation!=0">
 
 <div class="row" align="center">
@@ -33,6 +33,7 @@
     <span class="badge"><b class="lead custom-font-size-max" >{{noOfTries}}</b></span>
   </p>
 </div>
-<div align="center" class="btm-mgn top-mgn">
+<div align="center" class=" top-mgn">
 <button (click)="initializeGame()" class="btn btn-warning btn-sm"><span class="lead custom-font-size">Restart</span></button>
 </div>
+<p class="well lead text-center score btm-mgn ultra-top-mgn">Total No of Guesses : <b class="dont-change-this-shit-coward" >{{totalGuesses}}</b></p>
