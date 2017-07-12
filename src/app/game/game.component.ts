@@ -84,7 +84,7 @@ deviation: number;
       this.deviation = null;
        e.className = e.className.replace('hide','show');
        el.className = el.className.replace('show','hide');
-
+       this.totalGuesses = this.totalGuesses - 1;
     }
     else if(this.guess<1 || this.guess>10){
       el.className = el.className.replace('hide','show');
